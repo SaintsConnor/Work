@@ -22,7 +22,10 @@ from datetime import datetime as dt
 import socket
 
 # OS COMMAND LIST
-NMAPFTP = 'nmap --script ftp-* -p 21'+IP
+NMAPFTP = 'nmap --script ftp-* -p 21'+IP+" > ftp.txt"
+HTTPENUM = 'gobuster -w =~/Tools/Scripts-Pentest/SecLists/Discovery/Web-Content/directory-list-2.3-big.txt -u "+IP+" > http_enum.txt"
+SMBENUM = 'nmap --script smb-enum-shares.nse -p445 '+IP+' > smb.txt'
+SNMPENUM = "nmap -sU -p 161 --script=snmp-info "+IP+" > SNMP.txt"
 
 # Run Port Finder
 
@@ -54,13 +57,19 @@ except socket.gaierror:
 except socket.error:
   print("Couldn't connect to server")
   sys.exit()
-
+IP = target
 # Port Enumeration 
 
 if '21' or 21 in portsopen :
   os.system(NMAPFTP)
   
+if '80' or 80 in portsopen :
+  os.system(HTTPENUM)
 
+if 161 or '161' in portsopen:
+  os.system(SNMPENUM)
+if '445' or 445 in portsopen :
+  os.system(SMBENUM)
 
 
 
