@@ -8,7 +8,7 @@ if len(sys.argv) == 2:
   target = socket.gethostbyname(sys.argv[1]) # translates host to ipv4
 else:
   print("Invalid number of args")
-  print("Syntax: python3 port_scanner.py [ip/hostname]")
+  print("Syntax: python3 PortScanner.py [ip/hostname]")
 
 print("Scannning target: " + target)
 print("Time started: " + str(dt.now()))
