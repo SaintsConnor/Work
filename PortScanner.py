@@ -1,4 +1,14 @@
-#!/usr/bin/env python3
+#!/bin/python3
+
+# ------- Notes -------
+# This program has not been optimised. This is a python experiment, if successful development will begin on a shell script equivalent that is more optimized. 
+# Please contact Connor if any questions, details listed below
+
+# ------- Author Info -------
+
+# Github.com/SaintsConnor
+# Discord: connor#2597
+# Email: venomsneakymc@gmail.com
 
 import sys
 from datetime import datetime as dt
