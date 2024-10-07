@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/style.css" rel="stylesheet">
+    <title>SAQ Quiz</title>
+</head>
+<body>
+    <img alt="Securious Logo" src="https://cdn.shortpixel.ai/spai/w_300+q_lossless+ret_img+to_webp/https://securious.co.uk/wp-content/uploads/2021/09/securious-logo-SW-new-strap-cyber-lower.png">
+    <br>
+    <h1>Welcome to the SAQ Quiz</h1>
+    <p>We will determine the SAQ type you need based on your answers to the following questions.</p>
+    <div class="formbuilder-button form-group field-button-1683211864460">			
+	<a href="https://www.securious.co.uk" class="btn btn-lg btn-secondary" type="button">Home</a>
+    </div>
+    <form action="/get_saq_type" method="post">
+        <div class="rendered-form">
+
+    <div class="formbuilder-select form-group field-service_provider">
+        <label for="service_provider" class="formbuilder-select-label">
+            <label for="service_provider" style="color: rgb(0, 0, 0); font-family: " times="" new="" roman ";=" " font-size:=" " medium;=" " font-weight:=" " 400;=" " text-align:=" " start;=" " text-transform:=" " none;=" " white-space:=" " normal;"="">Are you a service provider?</label><span style="color: rgb(0, 0, 0); font-family: " times="" new="" roman ";=" " font-size:=" " medium;"="">&nbsp;</span>
+            <br><span class="formbuilder-required">*</span></label>
+        <select class="form-control" name="service_provider" id="service_provider" required="required" aria-required="true">
+            <option value="yes" selected="true" id="service_provider-0">Yes</option>
+            <option value="no" id="service_provider-1">No</option>
+        </select>
+    </div>
+    <div class="formbuilder-select form-group field-card_data_storage">
+        <label for="card_data_storage" class="formbuilder-select-label"><span style="color: rgb(0, 0, 0); font-family: " times="" new="" roman ";=" " font-size:=" " medium;"="">Do you store cardholder data (including legacy data) electronically?</span>
+            <br><span class="formbuilder-required">*</span></label>
+        <select class="form-control" name="card_data_storage" id="card_data_storage" required="required" aria-required="true">
+            <option value="yes" selected="true" id="card_data_storage-0">Yes</option>
+            <option value="no" id="card_data_storage-1">No</option>
+        </select>
+    </div>
+    <div class="formbuilder-select form-group field-e_commerce">
+        <label for="e_commerce" class="formbuilder-select-label"><span style="color: rgb(0, 0, 0); font-family: " times="" new="" roman ";=" " font-size:=" " medium;"="">Do you have an e-commerce website?</span>
+            <br><span class="formbuilder-required">*</span></label>
+        <select class="form-control" name="e_commerce" id="e_commerce" required="required" aria-required="true">
+            <option value="yes" selected="true" id="e_commerce-0">Yes</option>
+            <option value="no" id="e_commerce-1">No</option>
+        </select>
+    </div>
+    <div class="formbuilder-select form-group field-pci_dss_compliant_provider">
+        <label for="pci_dss_compliant_provider" class="formbuilder-select-label"><span style="color: rgb(0, 0, 0); font-family: " times="" new="" roman ";=" " font-size:=" " medium;"="">Do you outsource all elements of payment processing to a PCI DSS compliant provider?</span>
+            <br><span class="formbuilder-required">*</span></label>
+        <select class="form-control" name="pci_dss_compliant_provider" id="pci_dss_compliant_provider" required="required" aria-required="true">
+            <option value="yes" selected="true" id="pci_dss_compliant_provider-0">Yes</option>
+            <option value="no" id="pci_dss_compliant_provider-1">No</option>
+        </select>
+    </div>
+    <div class="formbuilder-select form-group field-payment_outsourced">
+        <label for="payment_outsourced" class="formbuilder-select-label"><span style="color: rgb(0, 0, 0); font-family: " times="" new="" roman ";=" " font-size:=" " medium;"="">Do you outsource some elements of payment processing (e.g. merchant accepts Direct Post), but not all, and no payment data touches your system?</span>
+            <br><span class="formbuilder-required">*</span></label>
+        <select class="form-control" name="payment_outsourced" id="payment_outsourced" required="required" aria-required="true">
+            <option value="yes" selected="true" id="payment_outsourced-0">Yes</option>
+            <option value="no" id="payment_outsourced-1">No</option>
+        </select>
+    </div>
+    <div class="formbuilder-select form-group field-face_to_face">
+        <label for="face_to_face" class="formbuilder-select-label"><span style="color: rgb(0, 0, 0); font-family: " times="" new="" roman ";=" " font-size:=" " medium;"="">Do you accept card-present transactions where the card is physically swiped or inserted into a terminal?</span>
+            <br><span class="formbuilder-required">*</span></label>
+        <select class="form-control" name="face_to_face" id="face_to_face" required="required" aria-required="true">
+            <option value="yes" selected="true" id="face_to_face-0">Yes</option>
+            <option value="no" id="face_to_face-1">No</option>
+        </select>
+    </div>
+    <div class="formbuilder-select form-group field-moto">
+        <label for="moto" class="formbuilder-select-label"><span style="color: rgb(0, 0, 0); font-family: " times="" new="" roman ";=" " font-size:=" " medium;"="">Do you process MOTO (Mail Order/Telephone Order) transactions?</span>
+            <br><span class="formbuilder-required">*</span></label>
+        <select class="form-control" name="moto" id="moto" required="required" aria-required="true">
+            <option value="yes" selected="true" id="moto-0">Yes</option>
+            <option value="no" id="moto-1">No</option>
+        </select>
+    </div>
+    <div class="formbuilder-select form-group field-p2pe">
+        <label for="p2pe" class="formbuilder-select-label"><span style="color: rgb(0, 0, 0); font-family: " times="" new="" roman ";=" " font-size:=" " medium;"="">Do you use a validated Point-to-Point Encryption (P2PE) solution for card-present transactions?</span>
+            <br><span class="formbuilder-required">*</span></label>
+        <select class="form-control" name="p2pe" id="p2pe" required="required" aria-required="true">
+            <option value="yes" selected="true" id="p2pe-0">Yes</option>
+            <option value="no" id="p2pe-1">No</option>
+        </select>
+    </div>
+    <div class="formbuilder-select form-group field-internet_connection">
+        <label for="internet_connection" class="formbuilder-select-label"><span style="color: rgb(0, 0, 0); font-family: " times="" new="" roman ";=" " font-size:=" " medium;"="">Do you connect to the internet?</span>
+            <br><span class="formbuilder-required">*</span></label>
+        <select class="form-control" name="internet_connection" id="internet_connection" required="required" aria-required="true">
+            <option value="yes" selected="true" id="internet_connection-0">Yes</option>
+            <option value="no" id="internet_connection-1">No</option>
+        </select>
+    </div>
+    <div class="formbuilder-select form-group field-payment_app">
+        <label for="payment_app" class="formbuilder-select-label"><span style="color: rgb(0, 0, 0); font-family: " times="" new="" roman ";=" " font-size:=" " medium;"="">Do you use a payment application that is not PA-DSS validated?</span>
+            <br><span class="formbuilder-required">*</span></label>
+        <select class="form-control" name="payment_app" id="payment_app" required="required" aria-required="true">
+            <option value="yes" selected="true" id="payment_app-0">Yes</option>
+            <option value="no" id="payment_app-1">No</option>
+        </select>
+    </div>
+    <div class="formbuilder-select form-group field-pts_check">
+        <label for="pts_check" class="formbuilder-select-label">
+            <label for="pts_check" style="color: rgb(0, 0, 0); font-family: " times="" new="" roman ";=" " font-size:=" " medium;=" " font-weight:=" " 400;=" " text-align:=" " start;=" " text-transform:=" " none;=" " white-space:=" " normal;"="">Do you perform periodic vulnerability scans of your internet-facing environments and remediate vulnerabilities?</label><span style="color: rgb(0, 0, 0); font-family: " times="" new="" roman ";=" " font-size:=" " medium;"="">&nbsp;</span>
+            <br><span class="formbuilder-required">*</span></label>
+        <select class="form-control" name="pts_check" id="pts_check" required="required" aria-required="true">
+            <option value="yes" selected="true" id="pts_check-0">Yes</option>
+            <option value="no" id="pts_check-1">No</option>
+        </select>
+    </div>
+
+    <div class="formbuilder-button form-group field-button-1683212181121">
+        <button type="submit" class="btn btn-danger" name="button-1683212181121" access="false" style="danger" id="button-1683212181121">Submit</button>
+    </div>
+</div>
+        </form>
+        
+    </body>
+</html>

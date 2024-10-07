@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>View SAQ Quiz result</title>
+
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<img alt="Securious Logo" src="https://cdn.shortpixel.ai/spai/w_300+q_lossless+ret_img+to_webp/https://securious.co.uk/wp-content/uploads/2021/09/securious-logo-SW-new-strap-cyber-lower.png">
+
+			<h3>
+				What SAQ Type do I need?
+			</h3>
+			<p>
+				The reccomended SAQ type for your business is:  {{ saq_type }}. Please click the button below to get sent to your requirements document.
+			</p> <a href="/download_saq_pdf/{{ saq_type }}" class="btn btn-secondary" type="button">Here</a>
+		</div>
+	</div>
+</div>
+  </body>
+</html>
